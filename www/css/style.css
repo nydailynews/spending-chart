@@ -92,6 +92,22 @@ div.intro p#datestamp + p:first-letter {
 	padding: 12px;
 }
 
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	margin-bottom: 30px;
+}
+
+.one {
+	grid-column: 1;
+  	grid-row: 1;
+}
+
+.two { 
+	grid-column: 2;
+	grid-row: 1 ;
+}
+
 table {
 	width: 375px;
 	font-family: 'Open Sans', sans-serif;
@@ -112,6 +128,7 @@ th {
 td {
 	height: 30px;
 	vertical-align: middle;
+	padding-left: 14px;
 }
 
 tr:nth-child(even) {
