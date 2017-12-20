@@ -93,7 +93,7 @@ div.intro p#datestamp + p:first-letter {
 }
 
 table {
-	width: 275px;
+	width: 375px;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
 	margin: auto;
@@ -110,7 +110,7 @@ th {
 }
 
 td {
-	height: 27px;
+	height: 30px;
 	vertical-align: middle;
 }
 
