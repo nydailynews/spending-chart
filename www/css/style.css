@@ -108,6 +108,10 @@ div.intro p#datestamp + p:first-letter {
 	grid-row: 1 ;
 }
 
+#sirr {
+	transform: translate(30px,-205px);
+}
+
 table {
 	width: 375px;
 	font-family: 'Open Sans', sans-serif;
@@ -140,10 +144,17 @@ table caption {
 }
 
 .caption {
-	font: 12px "Open Sans", sans-serif;
+	font: 15px "Open Sans", sans-serif;
 	color: #999;
 	margin: 20px;
 	text-align: center;
+}
+
+.note {
+	width: 375px;
+	margin: 20px auto 0 auto;
+	font: 12px "Open Sans", sans-serif;
+	color: #999;
 }
 
 .center {

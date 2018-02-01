@@ -3,12 +3,12 @@ function chart1() {
 
 	var dataset = [
 		{ name: 'Payroll', percent: 33 },
-		{ name: 'Overtime', percent: 5 },
+		{ name: 'Non-labor', percent: 22 },
+		{ name: 'Debt service', percent: 16 },
 		{ name: 'Health & Welfare', percent: 13 },
 		{ name: 'Pension', percent: 8 },
-		{ name: 'Other labor', percent: 3 },
-		{ name: 'Non-labor', percent: 22 },
-		{ name: 'Debt service', percent: 16 }
+		{ name: 'Overtime', percent: 5 },
+		{ name: 'Other labor', percent: 3 }
 	];
 
 	var pie=d3.layout.pie()
@@ -133,14 +133,13 @@ function chart1() {
 // THE MTA AGENCY CHART
 function chart2() {
 	var dataset = [
-		{ name: 'NYCT/SIR', percent: 54 },
+		{ name: 'NYC Transit', percent: 52 },
 		{ name: 'LIRR', percent: 10 },
 		{ name: 'Metro North', percent: 8 },
-		{ name: 'MTA Bus Company', percent: 4 },
+		{ name: 'MTA Bus Company', percent: 5 },
 		{ name: 'Headquarters', percent: 4 },
-		{ name: 'Bridges & Tunnels', percent: 3 },
-		{ name: 'Debt service', percent: 16 },
-		{ name: 'General Reserve', percent: 1}
+		{ name: 'Bridges & Tunnels', percent: 4 },
+		{ name: 'Staten Island Railway', id: 'sirr', percent: 0.4 }
 	];
 
 	var pie=d3.layout.pie()
@@ -206,12 +205,13 @@ function chart2() {
 				})
 				.attr("dy", ".4em")
 				.attr("text-anchor", "middle")
+				.attr('id',function(d){if(d.data.hasOwnProperty("id")) return d.data.id;})
 				.text(function(d){
 					return d.data.percent+"%";
 				})
 				.style({
 					fill:'#fff',
-					'font-size':'25px'
+					'font-size':'24px'
 				});
 
 		var legendRectSize=20;
