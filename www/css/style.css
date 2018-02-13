@@ -143,6 +143,15 @@ table caption {
 	display: none;
 }
 
+#big-table {
+	display: block;
+	width: 90%;
+}
+
+.first-column {
+	background-color: #dedede;
+}
+
 .caption {
 	font: 15px "Open Sans", sans-serif;
 	color: #999;
