@@ -17,9 +17,15 @@ function chart1() {
 			pie.padAngle(.03);
 
 	var w=500,h=500;
+	var innerRadius=150;
+	if(is_mobile){
+		w=320;
+		h=320;
+		innerRadius=110;
+	}
 
 	var outerRadius=w/2;
-	var innerRadius=150;
+	
 
 	// green, blue, yellow, orange, red, purple, pink
 	var colors = ['#69c242', '#64bbe3', '#ffcc00', '#ff7300', '#cf2030', '#971497', '#DB4777'];
@@ -34,9 +40,9 @@ function chart1() {
 
 	var svg=d3.select("#category-chart")
 			.append("svg")
+			.style("width",w)
+			.style("height",h)
 			.attr({
-				width:w,
-				height:h,
 				class:'shadow'
 			}).append('g')
 			.attr({
@@ -80,7 +86,7 @@ function chart1() {
 				})
 				.style({
 					fill:'#fff',
-					'font-size':'25px'
+					'font-size':'20px'
 				});
 
 		var legendRectSize=20;
@@ -148,9 +154,13 @@ function chart2() {
 			pie.padAngle(.03);
 
 	var w=500,h=500;
-
-	var outerRadius=w/2;
 	var innerRadius=150;
+	if(is_mobile){
+		w=320;
+		h=320;
+		innerRadius=110;
+	}
+	var outerRadius=w/2;
 
 	// green, blue, yellow, orange, red, purple, pink, another blue
 	var colors = ['#69c242', '#64bbe3', '#ffcc00', '#ff7300', '#cf2030', '#971497', '#DB4777', '#3668c9'];
@@ -164,9 +174,9 @@ function chart2() {
 
 	var svg=d3.select("#agency-chart")
 			.append("svg")
+			.style("width",w)
+			.style("height",h)
 			.attr({
-				width:w,
-				height:h,
 				class:'shadow'
 			}).append('g')
 			.attr({
@@ -211,7 +221,7 @@ function chart2() {
 				})
 				.style({
 					fill:'#fff',
-					'font-size':'24px'
+					'font-size':'20px'
 				});
 
 		var legendRectSize=20;

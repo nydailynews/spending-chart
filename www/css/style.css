@@ -30,7 +30,7 @@ body {
 }
 
 
-h1 {
+article h1 {
 	color: #030303;
 	font-family: 'PT Serif', serif;
 	font-weight: normal;
@@ -40,7 +40,7 @@ h1 {
 	margin: 30px;
 }
 
-h2 {
+article h2, .dek {
 	background-color: #7e7e7e;
 	color: white;
 	width: 275px;
@@ -112,7 +112,7 @@ div.intro p#datestamp + p:first-letter {
 	transform: translate(30px,-205px);
 }
 
-table {
+article table {
 	width: 375px;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
@@ -163,8 +163,7 @@ table caption {
 }
 
 div.ad {
-	width: 300px;
-	padding-bottom: 10px;
+	padding-bottom: 50px;
 }
 div.ad > span {
 	font-size: 10px;
@@ -178,23 +177,33 @@ div.ad > span {
 
 /* HANDHELD-SPECIFIC */
 @media only screen and ( min-width: 220px ) and ( max-width:727px ) {
-.intro p {
-	margin-left: 20px;
-	margin-right: 20px;
+	.intro p {
+		margin-left: 20px;
+		margin-right: 20px;
 
-}
+	}
 
-main p {
-	text-align: left;
-}
+	main p {
+		text-align: left;
+	}
 
-.revenue {
-	width: 100%;
-	height: auto;
-	max-height: none;
-	position: ;
-	left: 0;
-}
+	.chart-container {
+		width: 320px;
+		margin: auto;
+	}
+
+	.two {
+		grid-column: 1;
+		grid-row: 2;
+	}
+
+	div.two h2 {
+		margin-top: 50px;
+	}
+
+	article table, .note {
+		width: 80%;
+	}
 }
 /* TABLET-SPECIFIC */
 @media only screen and ( min-width: 728px ) and (max-width:1023px) {
