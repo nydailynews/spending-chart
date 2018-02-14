@@ -143,14 +143,95 @@ table caption {
 	display: none;
 }
 
-#big-table {
-	display: block;
-	width: 90%;
+/*  BIG TABLE  */
+
+#big-table h3 {
+	text-align: center;
+	text-transform: uppercase;
+	margin-bottom: 20px;
 }
 
-.first-column {
-	background-color: #dedede;
+#big-table table {
+  width: 90%;
+  table-layout: fixed;
+  margin-bottom: 50px;
 }
+
+#big-table thead {
+	background: #7e7e7e;
+}
+#big-table table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+#big-table table tr {
+  padding: .35em;
+}
+#big-table table th, #big-table table td {
+  padding: .625em;
+  text-align: center;
+  border-right: 1px solid #ddd;
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+#big-table table td:last-child {
+	border-right: none;
+}
+
+#big-table .column {
+	font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-align: left;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+#big-table table {
+	border: 0;
+  }
+  #big-table table caption {
+	font-size: 1.3em;
+  }
+  #big-table table thead {
+	border: none;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+  }
+
+  #big-table table tr {
+	border-bottom: 3px solid #ddd;
+	display: block;
+	margin-bottom: .625em;
+	background: none;
+  }
+  #big-table table td {
+	border-bottom: 1px solid #ddd;
+	display: block;
+	font-size: .8em;
+	text-align: right;
+  }
+  #big-table table td:before {
+	content: attr(data-label);
+	float: left;
+	font-weight: bold;
+	text-transform: uppercase;
+  }
+  #big-table table td:last-child {
+	border-bottom: 0;
+	border-right: 0;
+  }
+}
+
+/*=========================*/
 
 .caption {
 	font: 15px "Open Sans", sans-serif;
