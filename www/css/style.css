@@ -127,6 +127,7 @@ thead {
 
 th {
 	padding: 7px;
+	font-weight: normal;
 }
 
 td {
@@ -153,8 +154,8 @@ table caption {
 
 #big-table table {
   width: 90%;
-  table-layout: fixed;
   margin-bottom: 50px;
+  font-size: 13px;
 }
 
 #big-table thead {
@@ -170,10 +171,8 @@ table caption {
 #big-table table th, #big-table table td {
   padding: .625em;
   text-align: center;
+  vertical-align: middle;
   border-right: 1px solid #ddd;
-  font-size: .85em;
-  letter-spacing: .1em;
-  text-transform: uppercase;
   font-weight: normal;
 }
 
@@ -182,8 +181,6 @@ table caption {
 }
 
 #big-table .column {
-	font-size: .85em;
-  letter-spacing: .1em;
   text-transform: uppercase;
   text-align: left;
   font-weight: bold;
@@ -192,6 +189,12 @@ table caption {
 @media screen and (max-width: 600px) {
 #big-table table {
 	border: 0;
+	table-layout: fixed;
+	font-size: 15px;
+  }
+
+  #big-table h3 {
+  	margin-bottom: 0;
   }
   #big-table table caption {
 	font-size: 1.3em;
@@ -215,6 +218,7 @@ table caption {
   }
   #big-table table td {
 	border-bottom: 1px solid #ddd;
+	border-right: 0;
 	display: block;
 	font-size: .8em;
 	text-align: right;
@@ -222,7 +226,7 @@ table caption {
   #big-table table td:before {
 	content: attr(data-label);
 	float: left;
-	font-weight: bold;
+	font-weight: normal;
 	text-transform: uppercase;
   }
   #big-table table td:last-child {
